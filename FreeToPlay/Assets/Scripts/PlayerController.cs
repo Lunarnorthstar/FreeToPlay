@@ -46,6 +46,11 @@ public class PlayerController : MonoBehaviour
         if (CanMove(direction))
         {
             transform.position += (Vector3)direction;
+            enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                enemies[i].GetComponent<EnemyMovement>().SendMessage("Move");
+            }
         }
     }
 
@@ -53,18 +58,14 @@ public class PlayerController : MonoBehaviour
     {
         
         Vector3Int gridPosition = GroundTilemap.WorldToCell(transform.position + (Vector3)direction);
-        if ((!GroundTilemap.HasTile(gridPosition) && moveTimer >= 0) || (ObstacleTilemap.HasTile(gridPosition) && moveTimer >= 0))
+        if (!GroundTilemap.HasTile(gridPosition) || ObstacleTilemap.HasTile(gridPosition) || moveTimer >= 0)
         {
             return false;
         }
         else if (moveTimer <= 0)
         {
             moveTimer = moveSpeed;
-            enemies = GameObject.FindGameObjectsWithTag("Enemy");
-            for (int i = 0; i < enemies.Length; i++)
-            {
-                enemies[i].GetComponent<EnemyMovement>().SendMessage("Move");
-            }
+            
             return true;
         }
         else

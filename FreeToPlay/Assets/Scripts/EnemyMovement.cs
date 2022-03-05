@@ -18,6 +18,11 @@ public class EnemyMovement : MonoBehaviour
     private RaycastHit2D hitdown;
     private RaycastHit2D hitright;
     private RaycastHit2D hitleft;
+    
+    [SerializeField]
+    private Tilemap GroundTilemap;
+    [SerializeField]
+    private Tilemap ObstacleTilemap;
 
     void Move()
     {
@@ -96,7 +101,26 @@ public class EnemyMovement : MonoBehaviour
             }
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + targetDir, 1);
+        if (CanMove(targetDir))
+        {
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + targetDir, 1);
+        }
+        
+    }
+    
+    private bool CanMove(Vector2 direction)
+    {
+        
+        Vector3Int gridPosition = GroundTilemap.WorldToCell(transform.position + (Vector3)direction);
+        if (!GroundTilemap.HasTile(gridPosition) || ObstacleTilemap.HasTile(gridPosition))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+       
     }
 }
     
