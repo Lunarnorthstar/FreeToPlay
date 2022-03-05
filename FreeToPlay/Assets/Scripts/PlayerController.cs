@@ -66,11 +66,11 @@ public class PlayerController : MonoBehaviour
         {
             moveTimer = moveSpeed;
             
-            if(Physics2D.Raycast(transform.position, (Vector2)direction, 1).collider == null)
+            if(Physics2D.Raycast(transform.position, (Vector2)direction, 1, LayerMask.GetMask("Enemy")).collider == null)
             {
                 return true;
             }
-            else if(Physics2D.Raycast(transform.position, (Vector2)direction, 1).transform.CompareTag("Enemy"))
+            else if(Physics2D.Raycast(transform.position, (Vector2)direction, 1, LayerMask.GetMask("Enemy")).transform.CompareTag("Enemy"))
             {
                 Attack();
                 return false;

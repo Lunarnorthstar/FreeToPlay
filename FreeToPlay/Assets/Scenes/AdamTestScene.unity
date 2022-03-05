@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 360252709}
   - component: {fileID: 360252710}
   - component: {fileID: 360252713}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -10288,7 +10288,7 @@ GameObject:
   - component: {fileID: 1892173854}
   - component: {fileID: 1892173858}
   - component: {fileID: 1892173859}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}

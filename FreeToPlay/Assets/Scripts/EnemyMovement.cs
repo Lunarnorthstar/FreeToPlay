@@ -29,10 +29,10 @@ public class EnemyMovement : MonoBehaviour
         targetPos = GameObject.Find("Player").transform.position;
         targetLocal = transform.InverseTransformPoint(targetPos);
 
-        hitup = Physics2D.Raycast(transform.position, Vector2.up, 1);
-        hitdown = Physics2D.Raycast(transform.position, Vector2.down, 1);
-        hitright = Physics2D.Raycast(transform.position, Vector2.right, 1);
-        hitleft = Physics2D.Raycast(transform.position, Vector2.left, 1);
+        hitup = Physics2D.Raycast(transform.position, Vector2.up, 1, LayerMask.GetMask("Player"));
+        hitdown = Physics2D.Raycast(transform.position, Vector2.down, 1, LayerMask.GetMask("Player"));
+        hitright = Physics2D.Raycast(transform.position, Vector2.right, 1, LayerMask.GetMask("Player"));
+        hitleft = Physics2D.Raycast(transform.position, Vector2.left, 1, LayerMask.GetMask("Player"));
 
         targetDir = new Vector3(0, 0, 0);
         if (Vector3.Distance(target.transform.position, transform.position) <= sightDistance)
