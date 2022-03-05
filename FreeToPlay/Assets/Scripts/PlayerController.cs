@@ -17,7 +17,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Tilemap ObstacleTilemap;
 
-
+    private GameObject[] enemies;
+    
+    
     private void Awake()
     {
         controls = new PlayerMovement();
@@ -58,6 +60,11 @@ public class PlayerController : MonoBehaviour
         else if (moveTimer <= 0)
         {
             moveTimer = moveSpeed;
+            enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                enemies[i].GetComponent<EnemyMovement>().SendMessage("Move");
+            }
             return true;
         }
         else
