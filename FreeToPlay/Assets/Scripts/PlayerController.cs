@@ -66,7 +66,22 @@ public class PlayerController : MonoBehaviour
         {
             moveTimer = moveSpeed;
             
-            return true;
+            if(Physics2D.Raycast(transform.position, (Vector2)direction, 1).collider == null)
+            {
+                return true;
+            }
+            else if(Physics2D.Raycast(transform.position, (Vector2)direction, 1).transform.CompareTag("Enemy"))
+            {
+                Attack();
+                return false;
+            }
+            else
+            {
+                //Debug.Log(Physics2D.Raycast(transform.position, (Vector2)direction, 1).transform.tag);
+                return true;
+                
+            }
+           
         }
         else
         {
@@ -74,9 +89,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Attack()
+    {
+        Debug.Log("WHACK");
+    }
+
+
     private void Update()
     {
         moveTimer -= Time.deltaTime;
-        Debug.Log(moveTimer);
+        //Debug.Log(moveTimer);
     }
 }
