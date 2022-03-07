@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -24,6 +25,13 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private Tilemap ObstacleTilemap;
 
+    private EnemyStats myStats;
+
+    private void Start()
+    {
+        myStats = GetComponent<EnemyStats>();
+    }
+
     void Move()
     {
         targetPos = GameObject.Find("Player").transform.position;
@@ -37,6 +45,13 @@ public class EnemyMovement : MonoBehaviour
         targetDir = new Vector3(0, 0, 0);
         if (Vector3.Distance(target.transform.position, transform.position) <= sightDistance)
         {
+            if (Vector3.Distance(target.transform.position, transform.position) <= 1.1) //If the target is within attacking distance...
+            {
+                //Debug.Log("Enemy Attacking");
+                target.SendMessage("Attacked", myStats.damage); //Tell them they've been attacked and for how much damage.
+                return; //Don't do anything else.
+            }
+            
             if ((Mathf.RoundToInt(targetLocal.x) < 0 || Mathf.RoundToInt(targetLocal.x) > 0) &&
                 Mathf.RoundToInt(targetLocal.y) > 0 && hitup.collider == null)
             {
@@ -58,9 +73,6 @@ public class EnemyMovement : MonoBehaviour
             {
                 targetDir = Vector3.down;
             }
-            else
-            {
-            }
 
 
             if (Mathf.RoundToInt(targetLocal.y) == 0 && Mathf.RoundToInt(targetLocal.x) > 0 && hitleft.collider == null)
@@ -71,9 +83,6 @@ public class EnemyMovement : MonoBehaviour
                      hitright.collider == null)
             {
                 targetDir = Vector3.left;
-            }
-            else
-            {
             }
         }
         else

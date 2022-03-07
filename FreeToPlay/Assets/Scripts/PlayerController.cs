@@ -18,11 +18,13 @@ public class PlayerController : MonoBehaviour
     private Tilemap ObstacleTilemap;
 
     private GameObject[] enemies;
+    private PlayerStats myStats;
     
     
     private void Awake()
     {
         controls = new PlayerMovement();
+        myStats = GetComponent<PlayerStats>();
     }
 
     private void OnEnable()
@@ -43,9 +45,16 @@ public class PlayerController : MonoBehaviour
 
     private void Move(Vector2 direction)
     {
-        if (CanMove(direction))
+        if (moveTimer <= 0)
         {
-            transform.position += (Vector3)direction;
+            moveTimer = moveSpeed;
+            if (CanMove(direction))
+            {
+               
+                transform.position += (Vector3) direction;
+
+            }
+
             enemies = GameObject.FindGameObjectsWithTag("Enemy");
             for (int i = 0; i < enemies.Length; i++)
             {
@@ -58,13 +67,14 @@ public class PlayerController : MonoBehaviour
     {
         
         Vector3Int gridPosition = GroundTilemap.WorldToCell(transform.position + (Vector3)direction);
-        if (!GroundTilemap.HasTile(gridPosition) || ObstacleTilemap.HasTile(gridPosition) || moveTimer >= 0)
+        if (!GroundTilemap.HasTile(gridPosition) || ObstacleTilemap.HasTile(gridPosition))
         {
+            Debug.Log("Blah");
             return false;
         }
-        else if (moveTimer <= 0)
+        else 
         {
-            moveTimer = moveSpeed;
+            
             
             if(Physics2D.Raycast(transform.position, (Vector2)direction, 1, LayerMask.GetMask("Enemy")).collider == null)
             {
@@ -72,7 +82,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(Physics2D.Raycast(transform.position, (Vector2)direction, 1, LayerMask.GetMask("Enemy")).transform.CompareTag("Enemy"))
             {
-                Attack();
+                Attack(direction);
                 return false;
             }
             else
@@ -83,15 +93,13 @@ public class PlayerController : MonoBehaviour
             }
            
         }
-        else
-        {
-            return false;
-        }
     }
 
-    void Attack()
+    void Attack(Vector2 direction)
     {
-        Debug.Log("WHACK");
+        //Debug.Log("WHACK");
+        Physics2D.Raycast(transform.position, direction, 1, LayerMask.GetMask("Enemy"))
+            .collider.gameObject.GetComponent<EnemyStats>().SendMessage("Attacked", myStats.attack); //This is all one line. Make a raycast, then invoke the Attacked function of the target and pass in the damage.
     }
 
 

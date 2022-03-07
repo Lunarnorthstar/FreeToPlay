@@ -14,13 +14,10 @@ public class PlayerStats : MonoBehaviour
     public float block = 0.05f;
 
     [Header("Health Values")]
-    public int health; //Current health
-    public int maxHealth; //Max health
+    public float health; //Current health
+    public float maxHealth; //Max health
 
-    [Header("Image Variables")]
-    public Image[] hearts; //Array of heart images
-    public Sprite fullHeart; //image when full
-    public Sprite emptyHeart; //Image when empty
+    [Header("Image Variables")] public GameObject healthSprite;
 
 
     // Start is called before the first frame update
@@ -41,33 +38,15 @@ public class PlayerStats : MonoBehaviour
             health = maxHealth; //Set it to the max
         }
 
-        for (int i = 0; i < hearts.Length; i++) //For the length of the array
-        {
-            if (i < health) //if array slot less than current health
-            {
-                hearts[i].sprite = fullHeart; //make a fullheart sprite in the array
-            }
-            else //if it isnt
-            {
-                hearts[i].sprite = emptyHeart; //Make an empty heart in the array
-            }
+        healthSprite.transform.localScale = new Vector3(300*(health / maxHealth), healthSprite.transform.localScale.y, healthSprite.transform.localScale.z);
 
-            if (i < maxHealth) //If the array slot is less than max
-            {
-                hearts[i].enabled = true; //keep enabling hearts
-            }
-            else //if it isnt
-            {
-                hearts[i].enabled = false; //dont enable any more hearts
-            }
-
-        }
 
     }
-    public void DealDamage() //Deals damage
+    public void Attacked(int damage) //Taking damage
     {
-        
-            health--; //Lower health by 1
+
+        //Debug.Log("Player Hit Recieved");
+        health -= damage; //Subtract the incoming damage value from health
 
     }
 

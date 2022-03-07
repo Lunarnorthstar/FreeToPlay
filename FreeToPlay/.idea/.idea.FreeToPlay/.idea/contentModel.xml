@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="EnemyMovement.cs" t="Include" />
+          <e p="EnemyStats.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerStats.cs" t="Include" />
