@@ -5,7 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - Enemy
+=======
+  - SpawnPoint
+  - Rooms
+  - Grid
+>>>>>>> Stashed changes
 =======
   - SpawnPoint
   - Rooms
@@ -32,6 +38,10 @@ TagManager:
   - 
   - 
   - 
+<<<<<<< Updated upstream
+=======
+  - 
+>>>>>>> Stashed changes
   - Layer 1
   - Layer 2
   - Layer 3

@@ -154,7 +154,11 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     Standalone: com.DefaultCompany.FreeToPlay
+=======
+    Standalone: com.Company.ProductName
+>>>>>>> Stashed changes
 =======
     Standalone: com.Company.ProductName
 >>>>>>> Stashed changes
