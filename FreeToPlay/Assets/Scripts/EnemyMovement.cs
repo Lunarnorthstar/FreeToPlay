@@ -121,7 +121,7 @@ public class EnemyMovement : MonoBehaviour
     {
         
         Vector3Int gridPosition = GroundTilemap.WorldToCell(transform.position + (Vector3)direction);
-        if (!GroundTilemap.HasTile(gridPosition) || ObstacleTilemap.HasTile(gridPosition))
+        if (Physics2D.Raycast(transform.position, direction, 1, LayerMask.GetMask("Wall")).collider != null)
         {
             return false;
         }

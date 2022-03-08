@@ -6,12 +6,30 @@
     <e p="C:\Users\adamk\OneDrive\Documents\GitHub\FreeToPlay\FreeToPlay" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Cainos" t="Include">
+          <e p="Pixel Art Top Down - Basic" t="Include">
+            <e p="Changelog.txt" t="Include" />
+            <e p="Script" t="Include">
+              <e p="CameraFollow.cs" t="Include" />
+              <e p="LayerTrigger.cs" t="Include" />
+              <e p="PropsAltar.cs" t="Include" />
+              <e p="SpriteColorAnimation.cs" t="Include" />
+              <e p="TopDownCharacterController.cs" t="Include" />
+            </e>
+            <e p="Shader" t="Include">
+              <e p="SH Sprite Shadow Mask.shader" t="Include" />
+              <e p="SH Sprite Shadow.shader" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="EnemyMovement.cs" t="Include" />
           <e p="EnemyStats.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerStats.cs" t="Include" />
+          <e p="RoomSpawner.cs" t="Include" />
+          <e p="RoomTemplates.cs" t="Include" />
         </e>
       </e>
       <e p="FreeToPlay.sln" t="IncludeFlat" />
