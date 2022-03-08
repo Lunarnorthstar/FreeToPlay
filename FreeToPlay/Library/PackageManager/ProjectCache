@@ -8,8 +8,13 @@ m_ProjectFiles:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       ticks: 637822759750061573
     m_Hash: 1302763368
+=======
+      ticks: 637823383598526948
+    m_Hash: 1096441731
+>>>>>>> Stashed changes
 =======
       ticks: 637823383598526948
     m_Hash: 1096441731
@@ -31,8 +36,13 @@ m_ProjectFiles:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       ticks: 637822759750441360
     m_Hash: 2780916596
+=======
+      ticks: 637823383598526948
+    m_Hash: 2009282155
+>>>>>>> Stashed changes
 =======
       ticks: 637823383598526948
     m_Hash: 2009282155
@@ -691,7 +701,12 @@ m_PackageAssets:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       resolvedPath: D:\Repo\FreeToPlay\FreeToPlay\Library\PackageCache\com.unity.cinemachine@2.6.11
+=======
+      resolvedPath: C:\Users\jland\OneDrive\Documents\GitHub\Free To Play\Free To
+        Play\FreeToPlay\Library\PackageCache\com.unity.cinemachine@2.6.11
+>>>>>>> Stashed changes
 =======
       resolvedPath: C:\Users\jland\OneDrive\Documents\GitHub\Free To Play\Free To
         Play\FreeToPlay\Library\PackageCache\com.unity.cinemachine@2.6.11
@@ -1279,7 +1294,12 @@ m_PackageAssets:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       resolvedPath: D:\Repo\FreeToPlay\FreeToPlay\Library\PackageCache\com.unity.inputsystem@1.0.2
+=======
+      resolvedPath: C:\Users\jland\OneDrive\Documents\GitHub\Free To Play\Free To
+        Play\FreeToPlay\Library\PackageCache\com.unity.inputsystem@1.0.2
+>>>>>>> Stashed changes
 =======
       resolvedPath: C:\Users\jland\OneDrive\Documents\GitHub\Free To Play\Free To
         Play\FreeToPlay\Library\PackageCache\com.unity.inputsystem@1.0.2
@@ -3841,6 +3861,7 @@ m_PackageAssets:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         - 1.0.9-preview.1
         - 1.0.9-preview.2
         - 1.0.10-preview
@@ -3873,6 +3894,9 @@ m_PackageAssets:
         - 7.0.0-pre.3
         - 7.0.0-pre.4
         - 7.0.0
+=======
+        - 4.0.3
+>>>>>>> Stashed changes
 =======
         - 4.0.3
 >>>>>>> Stashed changes
@@ -3952,11 +3976,14 @@ m_PackageAssets:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         - 5.0.0-pre.1
         - 5.0.0-pre.2
         - 5.0.0
         - 5.0.1
         - 5.0.2
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
