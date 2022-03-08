@@ -6,7 +6,13 @@ TagManager:
   tags:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - Enemy
+=======
+  - SpawnPoint
+  - Rooms
+  - Grid
+>>>>>>> Stashed changes
 =======
   - SpawnPoint
   - Rooms
@@ -41,6 +47,9 @@ TagManager:
 <<<<<<< Updated upstream
 =======
   - 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   - Layer 1
   - Layer 2
