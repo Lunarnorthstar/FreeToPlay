@@ -17,8 +17,13 @@ public class Loot : MonoBehaviour
         
         if (other.gameObject.tag == "Player")
         {
+<<<<<<< Updated upstream
             FindObjectOfType<Collection>().SendMessage("GoldCollect", value); //Find the game manager and update the gold value
             Destroy(gameObject); //Delete self.
+=======
+            FindObjectOfType<GameManager>().SendMessage("GoldCollect", value);
+            Destroy(gameObject);
+>>>>>>> Stashed changes
         }
     }
 }
