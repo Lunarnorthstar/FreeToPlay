@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8045440530623405329}
   - component: {fileID: 8045440530623405342}
   - component: {fileID: -7874559614935895262}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -74,7 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
+    type: 3}
   m_Color: {r: 1, g: 0.05991656, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,3 +136,5 @@ MonoBehaviour:
   health: 30
   damage: 1
   loot: 10
+  lootDrop: {fileID: 5068178695310411008, guid: 735de0c9ad817e24a9ecd0384ba7f172,
+    type: 3}

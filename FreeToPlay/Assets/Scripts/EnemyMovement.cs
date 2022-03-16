@@ -45,7 +45,7 @@ public class EnemyMovement : MonoBehaviour
         targetDir = new Vector3(0, 0, 0);
         if (Vector3.Distance(target.transform.position, transform.position) <= sightDistance)
         {
-            if (Vector3.Distance(target.transform.position, transform.position) <= 1.1) //If the target is within attacking distance...
+            if (Vector3.Distance(target.transform.position, transform.position) <= 1.3) //If the target is within attacking distance...
             {
                 //Debug.Log("Enemy Attacking");
                 target.SendMessage("Attacked", myStats.damage); //Tell them they've been attacked and for how much damage.

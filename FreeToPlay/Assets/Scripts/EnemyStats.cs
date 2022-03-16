@@ -9,13 +9,16 @@ public class EnemyStats : MonoBehaviour
     public int damage = 1;
 
     public int loot = 10;
- 
+    public GameObject lootDrop;
+
 
     // Update is called once per frame
     void Update()
     {
         if (health <= 0)
         {
+            GameObject lootSpawn = Instantiate(lootDrop, transform.position, transform.rotation);
+            lootSpawn.SendMessage("Worth", loot);
             Destroy(gameObject);
         }
     }
