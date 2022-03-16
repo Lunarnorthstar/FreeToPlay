@@ -138,3 +138,7 @@ MonoBehaviour:
   loot: 10
   lootDrop: {fileID: 5068178695310411008, guid: 735de0c9ad817e24a9ecd0384ba7f172,
     type: 3}
+  healthDropChance: 50
+  healthDrop: {fileID: 5068178695310411008, guid: 6f1e5410de01f4a48a4a03ab48ffb427,
+    type: 3}
+  healthRestore: 3

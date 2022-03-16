@@ -13,7 +13,7 @@ public class Loot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("U");
+        
         if (other.gameObject.tag == "Player")
         {
             FindObjectOfType<Collection>().SendMessage("GoldCollect", value);
