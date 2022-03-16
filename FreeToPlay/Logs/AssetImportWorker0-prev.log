@@ -18,11 +18,19 @@ Logs/AssetImportWorker0.log
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 60241
 Successfully changed project path to: C:/Users/adamk/OneDrive/Documents/GitHub/FreeToPlay/FreeToPlay
 C:/Users/adamk/OneDrive/Documents/GitHub/FreeToPlay/FreeToPlay
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 53.54 ms, found 3 plugins.
+=======
+53733
+Successfully changed project path to: D:/Repo/FreeToPlay/FreeToPlay
+D:/Repo/FreeToPlay/FreeToPlay
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 97.97 ms, found 3 plugins.
+>>>>>>> Stashed changes
 =======
 53733
 Successfully changed project path to: D:/Repo/FreeToPlay/FreeToPlay
@@ -56,6 +64,7 @@ Direct3D:
     VRAM:     3029 MB
     Driver:   26.21.14.3086
 Initialize mono
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -98,6 +107,14 @@ Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,susp
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 >>>>>>> Stashed changes
+=======
+Mono path[0] = 'D:/2020.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'D:/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56428
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+>>>>>>> Stashed changes
 Register platform support module: D:/2020.3.18f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/2020.3.18f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: D:/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
@@ -114,6 +131,9 @@ Domain Reload Profiling:
 		BeginReloadAssembly (112ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -124,6 +144,7 @@ Domain Reload Profiling:
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -339,6 +360,11 @@ Domain Reload Profiling:
 			LoadAssemblies (112ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 >>>>>>> Stashed changes
+=======
+		EndReloadAssembly (882ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+>>>>>>> Stashed changes
 			SetupTypeCache (297ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (59ms)
@@ -353,6 +379,9 @@ Domain Reload Profiling:
 				AfterProcessingInitializeOnLoad (0ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -362,6 +391,7 @@ Domain Reload Profiling:
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -411,6 +441,8 @@ Domain Reload Profiling:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 Registering precompiled user dll's ...
 Registered in 0.006089 seconds.
 Begin MonoManager ReloadAssembly
@@ -426,6 +458,9 @@ Domain Reload Profiling:
 		BeginReloadAssembly (315ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -435,6 +470,7 @@ Domain Reload Profiling:
 			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -451,6 +487,8 @@ Domain Reload Profiling:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 			CreateAndSetChildDomain (31ms)
 		EndReloadAssembly (1876ms)
 			LoadAssemblies (193ms)
@@ -459,6 +497,7 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (101ms)
 			SetupLoadedEditorAssemblies (765ms)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
@@ -624,6 +663,11 @@ Total: 3.957500 ms (FindLiveObjects: 0.240700 ms CreateObjectMapping: 0.097000 m
 				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
 >>>>>>> Stashed changes
+=======
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+>>>>>>> Stashed changes
 				RefreshPlugins (98ms)
 				BeforeProcessingInitializeOnLoad (153ms)
 				ProcessInitializeOnLoadAttributes (475ms)
@@ -646,6 +690,9 @@ Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 3007.
 Total: 8.767700 ms (FindLiveObjects: 0.760500 ms CreateObjectMapping: 0.424200 ms MarkObjects: 7.419100 ms  DeleteObjects: 0.161400 ms)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -664,6 +711,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -739,6 +787,8 @@ Total: 4.065500 ms (FindLiveObjects: 0.263400 ms CreateObjectMapping: 0.147600 m
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   path: Assets/Scripts/EnemyStats.cs
   artifactKey: Guid(6ba5b238fddad63498d872570b6ab8f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/EnemyStats.cs using Guid(6ba5b238fddad63498d872570b6ab8f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1daa730770b50b7ab5c5205bbbb0ce5') in 0.073789 seconds 
@@ -751,6 +801,7 @@ Received Import Request.
   artifactKey: Guid(6f07f8ea5f79a754e8c98815c2881c51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/EnemyMovement.cs using Guid(6f07f8ea5f79a754e8c98815c2881c51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa2204043a78fcd077e3be0a9ec647a5') in 0.014331 seconds 
   Import took 0.021107 seconds .
+<<<<<<< Updated upstream
 
 ========================================================================
 Received Import Request.
@@ -977,6 +1028,97 @@ Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6
 >>>>>>> Stashed changes
 
 =======
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.422180 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(dd71ef1b9180825409f81260b98ce145) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(dd71ef1b9180825409f81260b98ce145) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c35c065f67f20ba2e3e9719221ea018') in 0.012423 seconds 
+  Import took 0.021086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 93.284011 seconds.
+  path: Assets/Scripts/PlayerMovement.cs
+  artifactKey: Guid(dd62bba17da77ae47b6ee95328067696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerMovement.cs using Guid(dd62bba17da77ae47b6ee95328067696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf443bdb153a35da2d910c2591ed364a') in 0.007311 seconds 
+  Import took 0.022773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 78.433207 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '024d2b6d972d632b58fcaccbc753e8e4') in 0.009414 seconds 
+  Import took 0.017833 seconds .
+
+>>>>>>> Stashed changes
+=======
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/Scripts/PlayerMovement.inputactions
+  artifactKey: Guid(b0ada5722ee8c7e4ba87bf7e9ab3d6dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerMovement.inputactions using Guid(b0ada5722ee8c7e4ba87bf7e9ab3d6dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73fcf188b63cb133f4fd008fc5e23cc6') in 0.045582 seconds 
+  Import took 0.053446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.526086 seconds.
+  path: Assets/Scripts/HealItem.cs
+  artifactKey: Guid(506513de126626144b4219c83de83eb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HealItem.cs using Guid(506513de126626144b4219c83de83eb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e35752660f374a7582243294b8cc61ab') in 0.013492 seconds 
+  Import took 0.020663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.308254 seconds.
+  path: Assets/Scripts/Loot.cs
+  artifactKey: Guid(d0ad3b5084ac1934c9804fd3a72cc4ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Loot.cs using Guid(d0ad3b5084ac1934c9804fd3a72cc4ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '883ae7350417b2cbbf0710ddb5e3add4') in 0.011749 seconds 
+  Import took 0.018936 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.645187 seconds.
+  path: Assets/Scripts/RoomTemplates.cs
+  artifactKey: Guid(ae584d242134a194c8d2fc9d06b7cd9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/RoomTemplates.cs using Guid(ae584d242134a194c8d2fc9d06b7cd9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e83fc7cfa857880f0d3f3a97fa1b5ec') in 0.010045 seconds 
+  Import took 0.017871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.276218 seconds.
+  path: Assets/Scripts/RoomSpawner.cs
+  artifactKey: Guid(f185f22496e26964282e44b378c1a257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/RoomSpawner.cs using Guid(f185f22496e26964282e44b378c1a257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3ad8d0cf2839d1e0bb7bbee2a22e223') in 0.010844 seconds 
+  Import took 0.018864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.162635 seconds.
+  path: Assets/Scripts/PlayerStats.cs
+  artifactKey: Guid(d3b5b859cca1ee24fa8f80b37bf34add) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerStats.cs using Guid(d3b5b859cca1ee24fa8f80b37bf34add) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dbbfa3d099d3e2dacf2b48de4b09706') in 0.008961 seconds 
+  Import took 0.016377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.878871 seconds.
+  path: Assets/Scripts/PlayerMovement.cs
+  artifactKey: Guid(dd62bba17da77ae47b6ee95328067696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerMovement.cs using Guid(dd62bba17da77ae47b6ee95328067696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b97183c6733896ab200732cbb49daf6') in 0.005434 seconds 
+  Import took 0.012128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.670921 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(5ee1d37e30a30774ab285d1e202f32db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerController.cs using Guid(5ee1d37e30a30774ab285d1e202f32db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceaaf35c6b26ab95390faef3f0477591') in 0.011262 seconds 
+  Import took 0.020148 seconds .
 
 ========================================================================
 Received Import Request.

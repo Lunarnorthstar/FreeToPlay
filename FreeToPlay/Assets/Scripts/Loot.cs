@@ -20,9 +20,12 @@ public class Loot : MonoBehaviour
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             FindObjectOfType<Collection>().SendMessage("GoldCollect", value); //Find the game manager and update the gold value
             Destroy(gameObject); //Delete self.
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
