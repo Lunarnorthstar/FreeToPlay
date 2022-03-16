@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class Loot : MonoBehaviour
 {
+    [Tooltip("How much gold is added to the total when collected")]
     public int value = 0;
     public void Worth(int input)
     {
-        value = input;
+        value = input; //Update your value based on the input from another gameobject.
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -16,8 +17,8 @@ public class Loot : MonoBehaviour
         
         if (other.gameObject.tag == "Player")
         {
-            FindObjectOfType<Collection>().SendMessage("GoldCollect", value);
-            Destroy(gameObject);
+            FindObjectOfType<Collection>().SendMessage("GoldCollect", value); //Find the game manager and update the gold value
+            Destroy(gameObject); //Delete self.
         }
     }
 }

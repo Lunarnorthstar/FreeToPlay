@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Collection : MonoBehaviour
 {
-    public int gold = 0;
+    [Tooltip("The amount of gold this object is worth")]
+    [SerializeField]private int gold = 0;
 
-    public void GoldCollect(int input)
+    public void GoldCollect(int input) //When this function is called...
     {
-        gold += input;
+        gold += input; //The value of this item is updated.
     }
 }

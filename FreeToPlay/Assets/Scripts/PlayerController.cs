@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         controls = new PlayerMovement();
-        myStats = GetComponent<PlayerStats>();
+        myStats = GetComponent<PlayerStats>(); //Get your movement and stats...
     }
 
     private void OnEnable()
