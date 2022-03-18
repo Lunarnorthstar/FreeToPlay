@@ -9,12 +9,15 @@ public class PlayerStats : MonoBehaviour
 
     //Variables
 
-    [Header("Attack Values")]
-    public int attack = 10;
+    [Header("Attack Values")] 
+    public int baseAttack = 10;
+    public int attack;
+    [Tooltip("Currently Unused")]
     public float block = 0.05f;
 
     [Header("Health Values")]
     public float health; //Current health
+    public float baseMaxHealth = 5;
     public float maxHealth; //Max health
 
     [Header("Image Variables")] public GameObject healthSprite;
@@ -23,7 +26,6 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -55,5 +57,16 @@ public class PlayerStats : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
 
+    }
+
+    public void UpdateStats()
+    {
+        maxHealth = baseMaxHealth + FindObjectOfType<GameManager>().healthBonus;
+        attack = baseAttack + FindObjectOfType<GameManager>().attackBonus;
+    }
+
+    public void NewRunInit()
+    {
+        health = maxHealth;
     }
 }
