@@ -47,6 +47,16 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
+        if (PlayerPrefs.GetFloat("attackCost") == 0)
+        {
+            PlayerPrefs.SetFloat("attackCost", 5);
+        }
+        
+        if (PlayerPrefs.GetFloat("healthCost") == 0)
+        {
+            PlayerPrefs.SetFloat("healthCost", 5);
+        }
+    
         player = GameObject.FindGameObjectWithTag("Player");
         GetState();
         UpdateUI();
