@@ -33,6 +33,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         myStats = GetComponent<EnemyStats>(); //Get your stat component
+        target = GameObject.Find("Player");
     }
 
     void Move()
