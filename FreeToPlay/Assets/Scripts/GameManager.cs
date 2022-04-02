@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     public int attackIncrease = 1;
     public int healthIncrease = 1;
 
+    public int characterType = 1;
+
 
     public float multipier = 1.2f;
 
@@ -148,5 +150,10 @@ public class GameManager : MonoBehaviour
             healthCost = Mathf.RoundToInt(healthCost * multipier);
             SetState();
         }
+    }
+
+    public void SetClass(int input)
+    {
+        characterType = input;
     }
 }

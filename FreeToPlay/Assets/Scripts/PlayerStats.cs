@@ -63,10 +63,26 @@ public class PlayerStats : MonoBehaviour
     {
         maxHealth = baseMaxHealth + FindObjectOfType<GameManager>().healthBonus;
         attack = baseAttack + FindObjectOfType<GameManager>().attackBonus;
+
+        
     }
 
     public void NewRunInit()
     {
+        if (FindObjectOfType<GameManager>().characterType == 2)
+        {
+            attack = Mathf.RoundToInt(attack * 0.7f);
+            maxHealth = Mathf.RoundToInt(maxHealth * 1.25f);
+            
+        }
+        
+        if (FindObjectOfType<GameManager>().characterType == 3)
+        {
+            attack = Mathf.RoundToInt(attack * 1.25f);
+            maxHealth = Mathf.RoundToInt(maxHealth * 0.7f); 
+            
+        }
+        
         health = maxHealth;
     }
 }

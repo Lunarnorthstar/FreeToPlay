@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -19,7 +21,14 @@ public class EnemyStats : MonoBehaviour
     public GameObject healthDrop;
     [Tooltip("The amount of health the health drop restores")]
     public int healthRestore = 3;
+    
+    private float timer = 0.2f;
+    private Color temp;
 
+    private void Start()
+    {
+        temp = gameObject.GetComponent<SpriteRenderer>().color;
+    }
 
     // Update is called once per frame
     void Update()
@@ -36,11 +45,25 @@ public class EnemyStats : MonoBehaviour
             
             Destroy(gameObject); //Destroy self.
         }
+
+
+        if (timer <= 0)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = temp;
+        }
+
+        timer -= Time.deltaTime;
     }
 
     public void Attacked(int damage)
     {
         //Debug.Log("Enemy Hit Recieved");
         health -= damage; //Lose health based on the damage sent by the attacking object, which calls this function.
+
+
+
+        
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        timer = 0.2f;
     }
 }
