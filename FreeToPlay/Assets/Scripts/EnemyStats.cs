@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class EnemyStats : MonoBehaviour
 {
+    public QuestTracker quests;
+
     [Header("Stats")]
     public int health = 30;
     public int damage = 1;
@@ -42,7 +44,7 @@ public class EnemyStats : MonoBehaviour
                 GameObject healthSpawn = Instantiate(healthDrop, transform.position, transform.rotation); //Generate a healing item prefab at your current location.
                 healthSpawn.SendMessage("Value", healthRestore); //Tell the healing item prefab how much it's worth.
             }
-            
+            quests.enemiesDefeated++;
             Destroy(gameObject); //Destroy self.
         }
 

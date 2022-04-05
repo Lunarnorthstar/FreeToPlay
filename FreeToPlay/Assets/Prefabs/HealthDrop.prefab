@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5068178695310411133}
   - component: {fileID: 5068178695310411010}
-  - component: {fileID: 5068178695310411011}
   - component: {fileID: 9217861816338248223}
   - component: {fileID: 1706427441305275221}
   - component: {fileID: 5019352590845626300}
@@ -87,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5068178695310411011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5068178695310411008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ad3b5084ac1934c9804fd3a72cc4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 1
 --- !u!58 &9217861816338248223
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506513de126626144b4219c83de83eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quests: {fileID: 11400000, guid: 8ce97a8857020f44cb29b53ae39c5ffc, type: 2}

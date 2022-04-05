@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+  quests: {fileID: 11400000, guid: 8ce97a8857020f44cb29b53ae39c5ffc, type: 2}
 --- !u!58 &9217861816338248223
 CircleCollider2D:
   m_ObjectHideFlags: 0

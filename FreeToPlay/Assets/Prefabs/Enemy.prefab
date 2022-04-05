@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
     type: 3}
   m_Color: {r: 1, g: 0.51609325, b: 0.48584908, a: 1}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba5b238fddad63498d872570b6ab8f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quests: {fileID: 11400000, guid: 8ce97a8857020f44cb29b53ae39c5ffc, type: 2}
   health: 30
   damage: 1
   loot: 10

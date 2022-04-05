@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class HealItem : MonoBehaviour
 {
+    public QuestTracker quests;
+
     [Tooltip("How much health this adds to the total when collected")]
     private int value = 0;
 
@@ -18,6 +20,7 @@ public class HealItem : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.GetComponent<PlayerStats>().health += value; //Increase the health stat of the other object.
+            quests.healthCollected++;
             Destroy(gameObject); //Destroy self.
         }
     }
