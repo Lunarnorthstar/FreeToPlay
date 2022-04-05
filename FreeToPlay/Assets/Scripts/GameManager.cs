@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private UnityEvent<string> healthPrice;
     [SerializeField] private UnityEvent<string> attackBonusadd;
     [SerializeField] private UnityEvent<string> healthBonusadd;
+    [SerializeField] private UnityEvent<string> timerAdd;
 
     private Vector3 startPos;
 
@@ -32,10 +33,18 @@ public class GameManager : MonoBehaviour
 
     public float multipier = 1.2f;
 
+    public float dayTimer;
+  
+
     public void Update()
     {
         //GetState();
         UpdateUI();
+
+        if (dayTimer > 0)
+        {
+            dayTimer -= Time.deltaTime;
+        }
     }
 
     public void Start()
@@ -64,11 +73,29 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    public void CountDown()
+    {
+        if (dayTimer <= 0)
+        {
+            dayTimer = 86400; //seconds in a day
+        }
+    }
+
     public void GoldCollect(int input)
     {
         gold += input;
         UpdateUI();
     }
+
+    public void GoldCollectTimer(int input)
+    {
+        if (dayTimer <= 0)
+        {
+            gold += input;
+            UpdateUI();
+        }
+    }
+
 
     private void UpdateUI()
     {
@@ -77,6 +104,7 @@ public class GameManager : MonoBehaviour
         healthPrice.Invoke(healthCost.ToString());
         attackBonusadd.Invoke(attackBonus.ToString());
         healthBonusadd.Invoke(healthBonus.ToString());
+        timerAdd.Invoke(dayTimer.ToString());
     }
 
     public void PauseGame()
@@ -101,6 +129,11 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    public void OnApplicationQuit()
+    {
+        SetState();
+    }
+
     public void ResetGame()
     {
         attackBonus = 0;
@@ -118,6 +151,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("attackCost", attackCost);
         PlayerPrefs.SetFloat("healthCost", healthCost);
         PlayerPrefs.SetInt("coins", gold);
+        PlayerPrefs.SetFloat("dayTimer", dayTimer);
         //now we need to save the data to PlayerPrefs on disk 
         PlayerPrefs.Save();
     }
@@ -129,6 +163,7 @@ public class GameManager : MonoBehaviour
         attackCost = PlayerPrefs.GetFloat("attackCost");
         healthCost = PlayerPrefs.GetFloat("healthCost");
         gold = PlayerPrefs.GetInt("coins");
+        dayTimer = PlayerPrefs.GetFloat("dayTimer");
        
     }
     public void UpgradeAttack()
