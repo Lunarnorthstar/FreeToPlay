@@ -21,6 +21,8 @@ public class PlayerStats : MonoBehaviour
     public float maxHealth; //Max health
 
     [Header("Image Variables")] public GameObject healthSprite;
+    public Sprite tankSprite;
+    public Sprite mageSprite;
 
 
     // Start is called before the first frame update
@@ -69,20 +71,22 @@ public class PlayerStats : MonoBehaviour
 
     public void NewRunInit()
     {
-        if (FindObjectOfType<GameManager>().characterType == 2)
+        switch (FindObjectOfType<GameManager>().characterType)
         {
-            attack = Mathf.RoundToInt(attack * 0.7f);
-            maxHealth = Mathf.RoundToInt(maxHealth * 1.25f);
+            case 1: break;
+            case 2: attack = Mathf.RoundToInt(attack * 0.7f);
+                maxHealth = Mathf.RoundToInt(maxHealth * 1.25f);
+
+                gameObject.GetComponent<SpriteRenderer>().sprite = tankSprite;
+                break;
+            case 3: attack = Mathf.RoundToInt(attack * 1.25f);
+                maxHealth = Mathf.RoundToInt(maxHealth * 0.7f); 
             
+                gameObject.GetComponent<SpriteRenderer>().sprite = mageSprite;
+                break;
+            default: break;
         }
         
-        if (FindObjectOfType<GameManager>().characterType == 3)
-        {
-            attack = Mathf.RoundToInt(attack * 1.25f);
-            maxHealth = Mathf.RoundToInt(maxHealth * 0.7f); 
-            
-        }
-        
-        health = maxHealth;
+       health = maxHealth;
     }
 }

@@ -969,6 +969,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4783304448032471911, guid: 1522136d8b3b3de4c926ad608f9167be,
         type: 3}
+      propertyPath: mageSprite
+      value: 
+      objectReference: {fileID: -2135585597343286014, guid: fd0836038b2dc6a4d9d15141178a6529,
+        type: 3}
+    - target: {fileID: 4783304448032471911, guid: 1522136d8b3b3de4c926ad608f9167be,
+        type: 3}
+      propertyPath: tankSprite
+      value: 
+      objectReference: {fileID: 2747690628134850419, guid: 2bf65d992e0823b4e81611d6a816c8a8,
+        type: 3}
+    - target: {fileID: 4783304448032471911, guid: 1522136d8b3b3de4c926ad608f9167be,
+        type: 3}
       propertyPath: healthSprite
       value: 
       objectReference: {fileID: 1941350105}
