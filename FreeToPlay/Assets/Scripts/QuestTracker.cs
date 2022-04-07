@@ -10,4 +10,5 @@ public class QuestTracker : ScriptableObject
     public int coinsCollected;
     public int healthCollected;
     public int enemiesDefeated;
+
 }

@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
 {
 
     //Variables
+    public GameManager gm;
 
     [Header("Attack Values")] 
     public int baseAttack = 10;
@@ -56,8 +57,7 @@ public class PlayerStats : MonoBehaviour
 
     public void Respawn() //Respawns player
     {
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        gm.Invoke("ReloadScene", 0);
 
     }
 

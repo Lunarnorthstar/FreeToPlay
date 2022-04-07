@@ -18,13 +18,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private UnityEvent<string> onlineAdd;
 
 
-    public bool dayGoldGet;
-    public bool dayHealthGet;
-    public bool dayEnemyGet;
-    public bool weekGoldGet;
-    public bool weekHealthGet;
-    public bool weekEnemyGet;
-
     private Vector3 startPos;
 
     public QuestTracker quests;
@@ -47,6 +40,11 @@ public class GameManager : MonoBehaviour
     public float dayTimer;
     public float onlineTimer;
 
+    public int dailyReward = 5;
+    public int weeklyReward = 50;
+
+    public bool canCollectDayTime;
+
     public void Update()
     {
         //GetState();
@@ -63,6 +61,8 @@ public class GameManager : MonoBehaviour
         {
             dayTimer -= Time.deltaTime;
         }
+        CountDown();
+        
 
         onlineTimer -= Time.deltaTime;
     }
@@ -88,16 +88,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetFloat("healthCost", 5);
         }
 
-        if(dayTimer <= 0)
-        {
-            dayEnemyGet = false;
-            dayGoldGet = false;
-            dayHealthGet = false;
-
-            weekEnemyGet = false;
-            weekGoldGet = false;
-            weekHealthGet = false;
-        }
+       
     
         player = GameObject.FindGameObjectWithTag("Player");
         GetState();
@@ -109,6 +100,7 @@ public class GameManager : MonoBehaviour
         if (dayTimer <= 0)
         {
             dayTimer = 86400; //seconds in a day
+            canCollectDayTime = true;
         }
     }
 
@@ -120,7 +112,7 @@ public class GameManager : MonoBehaviour
 
     public void GoldCollectTimer(int input)
     {
-        if (dayTimer <= 0)
+        if (canCollectDayTime == true)
         {
             gold += input;
             UpdateUI();
@@ -137,50 +129,32 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    public void dayGold()
+    public void Login()
     {
-        
-        if(quests.coinsCollected >= 200)
+        if (canCollectDayTime == true)
         {
-            
+            canCollectDayTime = false;
         }
-
-        UpdateUI();
-    }
-    public void dayHealth()
-    {
-
-        if (quests.healthCollected >= 25)
-        {
-
-        }
-
-        UpdateUI();
-    }
-    public void dayEnemy()
-    {
-
-        if (quests.coinsCollected >= 30)
-        {
-
-        }
-
-        UpdateUI();
     }
 
 
     private void UpdateUI()
     {
-        
-
-
         addGold.Invoke(gold.ToString());
         attackPrice.Invoke(attackCost.ToString());
         healthPrice.Invoke(healthCost.ToString());
         attackBonusadd.Invoke(attackBonus.ToString());
         healthBonusadd.Invoke(healthBonus.ToString());
-        timerAdd.Invoke(Mathf.RoundToInt(dayTimer).ToString() + " seconds");
+
+        if (!canCollectDayTime)
+        {
+            timerAdd.Invoke(Mathf.RoundToInt(dayTimer).ToString() + " seconds");
+        }
+        if (canCollectDayTime)
+        {
+            timerAdd.Invoke("Ready!");
+        }
+
         onlineAdd.Invoke(Mathf.RoundToInt(onlineTimer).ToString() + " seconds");
         if(onlineTimer <= 0)
         {
