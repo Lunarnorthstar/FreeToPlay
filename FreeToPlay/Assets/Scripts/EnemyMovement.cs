@@ -80,6 +80,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Wander(); //Call the wander function to randomize movement direction.
         }
+        
 
         if (CanMove(targetDir)) //If the CanMove function returns true using the target direction variable...
         {
@@ -89,6 +90,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Wander(); //Call the wander function to randomize movement
             transform.position = Vector3.MoveTowards(transform.position, transform.position + targetDir, 1); //Move to the target position
+            
         }
         
     }
@@ -97,7 +99,7 @@ public class EnemyMovement : MonoBehaviour
     {
         
         Vector3Int gridPosition = GroundTilemap.WorldToCell(transform.position + (Vector3)direction); //Convert the position targeted (current position plus target direction) to a tilemap cell
-        if (Physics2D.Raycast(transform.position, direction, 1, LayerMask.GetMask("Wall")).collider != null) //If a raycast in the target direction hits a collider in the "wall" layer...
+        if (Physics2D.Raycast(transform.position, direction, 1, LayerMask.GetMask("Wall")).collider != null || Physics2D.Raycast(transform.position, direction, 1, LayerMask.GetMask("Enemy")).collider != null) //If a raycast in the target direction hits a collider in the "wall" layer...
         {
             return false; //Say you can't move there.
         }
@@ -115,32 +117,56 @@ public class EnemyMovement : MonoBehaviour
         {
             int wander = Random.Range(1, 5); //Get a random number from 1 to 4 (the minimum is inclusive, but the maximum is exclusive, don't ask why)
 
-            if (wander == 1 && hitup.collider == null) //If it's 1, and the space above you is clear...
+
+            switch (wander)
             {
-                targetDir = Vector3.up; //Go up.
-                break; //Stop the while loop
+                case 1:
+                    targetDir = Vector3.up;
+                    if (CanMove(targetDir))
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        tryWander--; //The enemy tried to move into a wall. It will to make a valid move up to 10 times. This is a failsafe to prevent hardlocks.
+                    }
+                    break;
+                case 2:
+                    targetDir = Vector3.down;
+                    if (CanMove(targetDir))
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        tryWander--; //The enemy tried to move into a wall. It will to make a valid move up to 10 times. This is a failsafe to prevent hardlocks.
+                    }
+                    break;
+                case 3:
+                    targetDir = Vector3.left;
+                    if (CanMove(targetDir))
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        tryWander--; //The enemy tried to move into a wall. It will to make a valid move up to 10 times. This is a failsafe to prevent hardlocks.
+                    }
+                    break;
+                case 4:
+                    targetDir = Vector3.right;
+                    if (CanMove(targetDir))
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        tryWander--; //The enemy tried to move into a wall. It will to make a valid move up to 10 times. This is a failsafe to prevent hardlocks.
+                    }
+                    break;
+                default: break;
             }
-            else if (wander == 2 && hitdown.collider == null)
-            {
-                targetDir = Vector3.down; //Repeat for down (on a 2)
-                break; //Stop the loop
-            }
-            else if (wander == 3 && hitright.collider == null)
-            {
-                targetDir = Vector3.right; //And for right (on a 3)
-                break; //Stop loop
-            }
-            else if (wander == 4 && hitleft.collider == null)
-            {
-                targetDir = Vector3.left; //And left (4)
-                break; //Stop
-            }
-            else
-            {
-                tryWander--;
-                //The enemy tried to move into a wall. It will to make a valid move up to 10 times. This is a failsafe to prevent hardlocks.
-            }
+               
         }
     }
 }
-    
