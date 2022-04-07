@@ -93,7 +93,10 @@ public class GameManager : MonoBehaviour
         }
 
        
-    
+        if(dayTimer <= 0)
+        {
+            canCollectDayTime = true;
+        }
         player = GameObject.FindGameObjectWithTag("Player");
         GetState();
         UpdateUI();
@@ -241,6 +244,8 @@ public class GameManager : MonoBehaviour
         dayTimer = 0;
         weekTimer = 0;
         onlineTimer = 0;
+
+        canCollectDayTime = true;
 
         for (int i = 0; i < questButtons.Length; i++)
         {
