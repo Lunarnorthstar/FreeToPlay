@@ -55,11 +55,18 @@ public class PlayerController : MonoBehaviour
 
             }
 
-            enemies = GameObject.FindGameObjectsWithTag("Enemy");
-            for (int i = 0; i < enemies.Length; i++)
-            {
-                enemies[i].GetComponent<EnemyMovement>().SendMessage("Move");
-            }
+            Invoke("enemyTurn", 0.2f);
+
+            
+        }
+    }
+
+    private void enemyTurn()
+    {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            enemies[i].GetComponent<EnemyMovement>().SendMessage("Move");
         }
     }
 

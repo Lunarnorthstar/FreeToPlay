@@ -22,6 +22,7 @@ public class PlayerStats : MonoBehaviour
     public float maxHealth; //Max health
 
     [Header("Image Variables")] public GameObject healthSprite;
+    public Sprite warriorSprite;
     public Sprite tankSprite;
     public Sprite mageSprite;
 
@@ -73,7 +74,8 @@ public class PlayerStats : MonoBehaviour
     {
         switch (FindObjectOfType<GameManager>().characterType)
         {
-            case 1: break;
+            case 1: gameObject.GetComponent<SpriteRenderer>().sprite = warriorSprite;
+                break;
             case 2: attack = Mathf.RoundToInt(attack * 0.7f);
                 maxHealth = Mathf.RoundToInt(maxHealth * 1.25f);
 

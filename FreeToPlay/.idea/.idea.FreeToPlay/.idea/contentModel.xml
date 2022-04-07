@@ -32,6 +32,7 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerStats.cs" t="Include" />
+          <e p="QuestButton.cs" t="Include" />
           <e p="QuestTracker.cs" t="Include" />
           <e p="RoomSpawner.cs" t="Include" />
           <e p="RoomTemplates.cs" t="Include" />

@@ -36,23 +36,36 @@ public class QuestButton : MonoBehaviour
     // Update is called once per frame
     public void DisableButton()
     {
-        if((goldQuest && quests.coinsCollected >= questNeeds) || 
-           (healthQuest && quests.healthCollected >= questNeeds) ||
-           (enemyQuest && quests.enemiesDefeated >= questNeeds))
+        if (dailyQuest)
         {
-            
-            myButton.interactable = false;
-            if(dailyQuest)
+            if((goldQuest && quests.coinsCollected >= questNeeds) || 
+               (healthQuest && quests.healthCollected >= questNeeds) ||
+               (enemyQuest && quests.enemiesDefeated >= questNeeds))
             {
+            
+                myButton.interactable = false;
                 gm.gold += gm.dailyReward;
                 gm.Invoke("UpdateUI",0); 
-            }
-            if (weeklyQuest)
-            {
-                gm.gold += gm.weeklyReward;
-                gm.Invoke("UpdateUI", 0);
+                
             }
         }
+        
+        if (weeklyQuest)
+        {
+            if((goldQuest && (quests.coinsCollectedWeek + quests.coinsCollected) >= questNeeds) || 
+               (healthQuest && quests.healthCollectedWeek + quests.healthCollected >= questNeeds) ||
+               (enemyQuest && quests.enemiesDefeatedWeek + quests.enemiesDefeated >= questNeeds))
+            {
+            
+                myButton.interactable = false;
+                gm.gold += gm.weeklyReward;
+                gm.Invoke("UpdateUI",0); 
+                
+            }
+        }
+        
+        
+        
         
     }
 

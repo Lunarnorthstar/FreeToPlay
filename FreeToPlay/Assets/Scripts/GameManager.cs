@@ -39,11 +39,15 @@ public class GameManager : MonoBehaviour
 
     public float dayTimer;
     public float onlineTimer;
+    public int weekTimer;
 
     public int dailyReward = 5;
     public int weeklyReward = 50;
 
     public bool canCollectDayTime;
+
+    public GameObject[] questButtons;
+    public GameObject[] questButtonsWeek;
 
     public void Update()
     {
@@ -101,6 +105,35 @@ public class GameManager : MonoBehaviour
         {
             dayTimer = 86400; //seconds in a day
             canCollectDayTime = true;
+            
+            for (int i = 0; i < questButtons.Length; i++)
+            {
+                questButtons[i].gameObject.GetComponent<QuestButton>().Invoke("EnableButton", 0);
+            }
+
+            quests.coinsCollectedWeek += quests.coinsCollected;
+            quests.enemiesDefeatedWeek += quests.enemiesDefeated;
+            quests.healthCollectedWeek += quests.healthCollected;
+            
+
+            quests.coinsCollected = 0;
+            quests.enemiesDefeated = 0;
+            quests.healthCollected = 0;
+
+            weekTimer++;
+        }
+
+        if (weekTimer >= 7)
+        {
+            weekTimer = 0;
+            for (int i = 0; i < questButtonsWeek.Length; i++)
+            {
+                questButtonsWeek[i].gameObject.GetComponent<QuestButton>().Invoke("EnableButton", 0);
+            }
+
+            quests.coinsCollectedWeek = 0;
+            quests.enemiesDefeatedWeek = 0;
+            quests.healthCollectedWeek = 0;
         }
     }
 
@@ -200,9 +233,24 @@ public class GameManager : MonoBehaviour
         quests.healthCollected = 0;
         quests.enemiesDefeated = 0;
         quests.coinsCollected = 0;
+        
+        quests.healthCollectedWeek = 0;
+        quests.enemiesDefeatedWeek = 0;
+        quests.coinsCollectedWeek = 0;
 
         dayTimer = 0;
+        weekTimer = 0;
         onlineTimer = 0;
+
+        for (int i = 0; i < questButtons.Length; i++)
+        {
+            questButtons[i].gameObject.GetComponent<QuestButton>().Invoke("EnableButton", 0);
+        }
+        for (int i = 0; i < questButtonsWeek.Length; i++)
+        {
+            questButtonsWeek[i].gameObject.GetComponent<QuestButton>().Invoke("EnableButton", 0);
+        }
+        
         SetState();
     }
     public void SetState()

@@ -461,6 +461,61 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
         type: 3}
+      propertyPath: questButtons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
+      propertyPath: questButtons.Array.data[0]
+      value: 
+      objectReference: {fileID: 419020220}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
+      propertyPath: questButtons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1998435179}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
+      propertyPath: questButtons.Array.data[2]
+      value: 
+      objectReference: {fileID: 170631786}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
+      propertyPath: questButtons.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
+      propertyPath: questButtons.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
+      propertyPath: questButtons.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
+      propertyPath: questButtonsWeek.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
+      propertyPath: questButtonsWeek.Array.data[0]
+      value: 
+      objectReference: {fileID: 1557744818}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
+      propertyPath: questButtonsWeek.Array.data[1]
+      value: 
+      objectReference: {fileID: 1094726795}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
+      propertyPath: questButtonsWeek.Array.data[2]
+      value: 
+      objectReference: {fileID: 24311392}
+    - target: {fileID: 5114302238128741592, guid: d78e2e8677e3a7748886b74358d553e1,
+        type: 3}
       propertyPath: addGold.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1149,6 +1204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4783304448032471911, guid: 1522136d8b3b3de4c926ad608f9167be,
         type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 543563133}
+    - target: {fileID: 4783304448032471911, guid: 1522136d8b3b3de4c926ad608f9167be,
+        type: 3}
       propertyPath: block
       value: 0
       objectReference: {fileID: 0}
@@ -1194,6 +1254,12 @@ PrefabInstance:
       propertyPath: baseMaxHealth
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4783304448032471911, guid: 1522136d8b3b3de4c926ad608f9167be,
+        type: 3}
+      propertyPath: warriorSprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: cd392f596dab1c0448af0879b1c659fe,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1522136d8b3b3de4c926ad608f9167be, type: 3}
 --- !u!114 &1786698769 stripped
@@ -1510,10 +1576,20 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 312064007249039605, guid: 64c97835c9d49524296e09359ae3d012,
+        type: 3}
+      propertyPath: m_Name
+      value: ClaimButton2
+      objectReference: {fileID: 0}
     - target: {fileID: 451806806397388243, guid: 64c97835c9d49524296e09359ae3d012,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 956108574210595476, guid: 64c97835c9d49524296e09359ae3d012,
+        type: 3}
+      propertyPath: m_Name
+      value: ClaimButtonw3
       objectReference: {fileID: 0}
     - target: {fileID: 1481354483382798327, guid: 64c97835c9d49524296e09359ae3d012,
         type: 3}
@@ -1935,6 +2011,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3638891231726102790, guid: 64c97835c9d49524296e09359ae3d012,
+        type: 3}
+      propertyPath: m_Name
+      value: ClaimButtonw2
+      objectReference: {fileID: 0}
     - target: {fileID: 3685935221747039477, guid: 64c97835c9d49524296e09359ae3d012,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2203,7 +2284,7 @@ PrefabInstance:
     - target: {fileID: 4902788300671071990, guid: 64c97835c9d49524296e09359ae3d012,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4902788300671071990, guid: 64c97835c9d49524296e09359ae3d012,
         type: 3}
@@ -2430,6 +2511,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Collect 200 coins total
       objectReference: {fileID: 0}
+    - target: {fileID: 5656365409410493969, guid: 64c97835c9d49524296e09359ae3d012,
+        type: 3}
+      propertyPath: m_Name
+      value: ClaimButton3
+      objectReference: {fileID: 0}
     - target: {fileID: 6102343871247001570, guid: 64c97835c9d49524296e09359ae3d012,
         type: 3}
       propertyPath: m_text
@@ -2439,6 +2525,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144277711725729428, guid: 64c97835c9d49524296e09359ae3d012,
+        type: 3}
+      propertyPath: m_Name
+      value: ClaimButton1
       objectReference: {fileID: 0}
     - target: {fileID: 6152517651446782785, guid: 64c97835c9d49524296e09359ae3d012,
         type: 3}
@@ -2479,6 +2570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563134716547676571, guid: 64c97835c9d49524296e09359ae3d012,
+        type: 3}
+      propertyPath: m_Name
+      value: ClaimButtonw1
       objectReference: {fileID: 0}
     - target: {fileID: 6598973257839080688, guid: 64c97835c9d49524296e09359ae3d012,
         type: 3}

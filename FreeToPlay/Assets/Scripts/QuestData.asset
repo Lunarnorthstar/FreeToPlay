@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe206bbbae007042bf626bb9aa36852, type: 3}
   m_Name: QuestData
   m_EditorClassIdentifier: 
-  coinsCollected: 0
+  coinsCollected: 500
   healthCollected: 0
   enemiesDefeated: 0
+  coinsCollectedWeek: 0
+  healthCollectedWeek: 0
+  enemiesDefeatedWeek: 0
