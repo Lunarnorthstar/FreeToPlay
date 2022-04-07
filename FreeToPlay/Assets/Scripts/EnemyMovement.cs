@@ -30,10 +30,20 @@ public class EnemyMovement : MonoBehaviour
 
     private EnemyStats myStats; //The stat component of the enemy
 
+    [Tooltip("The minimum amount of moves an enemy makes while chasing the player before it stops and wanders for a move")]
+    [SerializeField] private int attentionSpanMin = 0;
+    [Tooltip("The maximum amount of moves an enemy makes while chasing the player before it stops and wanders for a move")]
+    [SerializeField] private int attentionSpanMax = 0;
+
+    private int attention = 0;
+    private int currentAttentionSpan; //The currently selected amount of moves before an enemy wanders;
+
     private void Start()
     {
         myStats = GetComponent<EnemyStats>(); //Get your stat component
         target = GameObject.Find("Player");
+
+        currentAttentionSpan = Random.Range(attentionSpanMin, attentionSpanMax + 1);
     }
 
     void Move()
@@ -75,6 +85,17 @@ public class EnemyMovement : MonoBehaviour
             {
                 targetDir = Vector3.left; //Set your destination to left.
             }
+
+            attention++;
+
+            if (attention >= currentAttentionSpan)
+            {
+                Wander();
+                currentAttentionSpan = Random.Range(attentionSpanMin, attentionSpanMax + 1);
+                attention = 0;
+            }
+
+
         }
         else //If the distance between the player and enemy is larger than the enemy's sight distance...
         {

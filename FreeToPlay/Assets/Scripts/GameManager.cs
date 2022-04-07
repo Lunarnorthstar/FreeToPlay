@@ -226,6 +226,9 @@ public class GameManager : MonoBehaviour
         quests.healthCollected = 0;
         quests.enemiesDefeated = 0;
         quests.coinsCollected = 0;
+
+        dayTimer = 0;
+        onlineTimer = 0;
         SetState();
     }
     public void SetState()

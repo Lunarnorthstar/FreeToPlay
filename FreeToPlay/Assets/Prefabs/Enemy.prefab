@@ -105,6 +105,8 @@ MonoBehaviour:
   sightDistance: 5
   GroundTilemap: {fileID: 0}
   ObstacleTilemap: {fileID: 0}
+  attentionSpanMin: 4
+  attentionSpanMax: 6
 --- !u!58 &8045440530623405342
 CircleCollider2D:
   m_ObjectHideFlags: 0
